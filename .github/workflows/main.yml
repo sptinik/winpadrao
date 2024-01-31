@@ -26,11 +26,11 @@ jobs:
 
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
 
-    - name: Create Tunnel for RDP (Port 3389)
-      run: .\ngrok\ngrok.exe tcp 3389 &
-
-    - name: Create Tunnel for HTTP (Port 80)
+    - name: Create Tunnel for
       run: .\ngrok\ngrok.exe tcp 80 &
 
-    - name: Create Tunnel for SMTP (Port 25)
+    - name: Create Tunnel for
       run: .\ngrok\ngrok.exe tcp 25 &
+
+    - name: Create Tunnel
+      run: .\ngrok\ngrok.exe tcp 3389 &

@@ -28,7 +28,4 @@ jobs:
    
     - name: Create Tunnel for SMTP (Port 25)
       run: .\ngrok\ngrok.exe tcp 25 &
-      
-    - name: Create Tunnel for RDP (Port 3389)
-      run: .\ngrok\ngrok.exe tcp 3389 &
 

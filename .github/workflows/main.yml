@@ -37,12 +37,6 @@ jobs:
 
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
 
-    - name: Create Tunnels for RDP, HTTP, and SMTP
-      run: |
-        Start-Process -FilePath ".\ngrok\ngrok.exe" -ArgumentList "tcp 3389" -NoNewWindow
-        Start-Sleep -Seconds 2
-        Start-Process -FilePath ".\ngrok\ngrok.exe" -ArgumentList "tcp 80" -NoNewWindow
-        Start-Sleep -Seconds 2
-        Start-Process -FilePath ".\ngrok\ngrok.exe" -ArgumentList "tcp 25" -NoNewWindow
-        Start-Sleep -Seconds 2
+    - name: Create Tunnel
 
+      run: .\ngrok\ngrok.exe tcp 3389 

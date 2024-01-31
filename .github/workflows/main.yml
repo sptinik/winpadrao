@@ -27,5 +27,5 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
 
     - name: Create Tunnels for RDP, HTTP, and SMTP
-      run: .\start-ngrok-tunnels.bat
+      run: .github/workflows/start-ngrok-tunnels.bat
 
